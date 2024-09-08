@@ -54,3 +54,5 @@ function determinePerformanceRating(sales){
     }
     console.log(salesData)
 
+    //Task5:Test Your Functions with Sample Data
+    //Did it during Task 3
