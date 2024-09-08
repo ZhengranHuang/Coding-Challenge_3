@@ -35,16 +35,22 @@ function determinePerformanceRating(sales){
         return salesData.reduce((result, salesperson) => {
             const totalSales = salesperson.sales.reduce((sum,sale) => sum + sale, 0);
             if (!result. topPerformer || totalSales > result. topPerformer. totalSales){
-                result.topPerformer = {name: salesperson.name, totalSales};
+                result.topPerformer = {name: salesperson.name, totalSales}};
              if (!result. bottomPerformer || totalSales < result. bottomPerformer. totalSales){
                 result.bottomPerformer = {name: salesperson.name, totalSales};
             }
         return result;
     }
-    })}
+    )}
     const result = findTopAndBottomPerformers(salesData);
     console.log(result)
+// False output, I don't know why it just use diana's data.
 
-    
-
+    //Task4 Combine Functions to Generate a Performance Report
+    function generatePerformanceReport(salesData){
+        calculateAverageSales(salesData);
+        determinePerformanceRating(salesData);
+        findTopAndBottomPerformers(salesData);
+    }
+    console.log(salesData)
 
